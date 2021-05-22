@@ -54,6 +54,7 @@ def main_function():
         'issuetype': {'name': 'Story'},
         }
         _ = jira.create_issue(issue_dict)
+    os.remove(tickets_to_make_file)
     tickets_made = len(wav_files)
     speak_text(f"Created {tickets_made} ticket{'s' if tickets_made != 1 else ''}")
 
